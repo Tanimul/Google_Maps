@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoogleMaps">
         <activity
-            android:name=".MapActivity"
+            android:name=".SimpleMapActivity"
             android:exported="false" />
 
         <meta-data

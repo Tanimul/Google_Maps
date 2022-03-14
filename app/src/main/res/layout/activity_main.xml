@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/location_enable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location Enable !" />
 
+    <Button
+        android:id="@+id/enableornot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Location Enable or not?" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/simple_mapinit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="simple Map Initilize" />
+
+    <Button
+        android:id="@+id/cur_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Current location" />
+
+    <Button
+        android:id="@+id/details_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Details  location"
+
+        />
+
+    <Button
+        android:id="@+id/locationsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search location" />
+
+    <Button
+        android:id="@+id/arroundcurrentlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Arround current location" />
+
+</LinearLayout>

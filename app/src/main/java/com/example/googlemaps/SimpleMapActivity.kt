@@ -2,7 +2,8 @@ package com.example.googlemaps
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.googlemaps.databinding.ActivityMapBinding
+import com.example.googlemaps.databinding.ActivitySimpleMapBinding
+
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -10,12 +11,12 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
-class MapActivity : AppCompatActivity(), OnMapReadyCallback {
-    private lateinit var binding: ActivityMapBinding
+class SimpleMapActivity : AppCompatActivity(), OnMapReadyCallback {
+    private lateinit var binding: ActivitySimpleMapBinding
     private lateinit var mMap: GoogleMap
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMapBinding.inflate(layoutInflater)
+        binding = ActivitySimpleMapBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val mapFragment = supportFragmentManager
