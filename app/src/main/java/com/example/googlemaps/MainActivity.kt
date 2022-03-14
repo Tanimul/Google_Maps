@@ -40,6 +40,10 @@ class MainActivity : AppCompatActivity() {
         binding.curLocation.setOnClickListener {
             startActivity(Intent(this, CurrentLocationMapActivity::class.java))
         }
+
+        binding.detailsLocation.setOnClickListener {
+            startActivity(Intent(this, ShowDetailsMapActivity::class.java))
+        }
     }
 
     private fun displayLocationSettingsRequest(context: Context) {
