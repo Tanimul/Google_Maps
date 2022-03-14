@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
         binding.locationEnable.setOnClickListener {
             displayLocationSettingsRequest(this)
         }
+
+        binding.curLocation.setOnClickListener {
+            startActivity(Intent(this, CurrentLocationMapActivity::class.java))
+        }
     }
 
     private fun displayLocationSettingsRequest(context: Context) {
@@ -58,14 +62,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         task.addOnFailureListener { exception ->
-            if (exception is ResolvableApiException){
+            if (exception is ResolvableApiException) {
                 // Location settings are not satisfied, but this can be fixed
                 // by showing the user a dialog.
                 try {
                     // Show the dialog by calling startResolutionForResult(),
                     // and check the result in onActivityResult().
-                    exception.startResolutionForResult(this@MainActivity,
-                        REQUEST_CHECK_SETTINGS)
+                    exception.startResolutionForResult(
+                        this@MainActivity,
+                        REQUEST_CHECK_SETTINGS
+                    )
                     Toast.makeText(
                         this@MainActivity,
                         "location Enable Processing",
